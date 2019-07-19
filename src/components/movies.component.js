@@ -10,9 +10,6 @@ class MoviesComponent extends React.Component {
   constructor(props) {
         super(props);
 
-        // this.state = {
-        //     movies:[]
-        // }
         this.props.fetchMoreMovies(1);
         this.state={
           page: 1
@@ -21,23 +18,7 @@ class MoviesComponent extends React.Component {
     }
 
 _addOrRemoveFromLikes(item, isAdd) {
-    // // Alert.alert("add");
-    // var favouriteList = JSON.parse(JSON.stringify(this.state.favouriteList));
-    //   if((favouriteList.hasOwnProperty('category') && favouriteList['category'] == 'Favourites')) {
-    //     if(favouriteList.hasOwnProperty('channels')){
-    //       if(!isAdd)
-    //         favouriteList['channels'].push(item);
-    //       else 
-    //         favouriteList['channels'].pop(item);
-    //     }
-    //   } 
-    //   this.setState({
-    //     favouriteList: favouriteList,
-    //   })
-
-      // setTimeout(()=>{
-      //   this._addOrRemoveFromFavourites(item, false);
-      // }, 8000);
+ //tood later
     }
 
   renderMovieItem = (item) => {
@@ -56,7 +37,6 @@ _addOrRemoveFromLikes(item, isAdd) {
             //     color="#223322"
             //   />
     render() {
-      // alert(JSON.stringify(this.props.Movies.length));
         return (
 
            	<View style={styles.container}>

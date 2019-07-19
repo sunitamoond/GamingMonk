@@ -6,12 +6,10 @@ export default function(state = [], action) {
     case constants.FETCH_MORE_MOVIES:
     	if(action.json != undefined) {
     		var newState = [...state, ...action.json];
-    		// alert(JSON.stringify(newState.length));
       		return newState ;
     	}
       	return state;
     default:
-    // alert(JSON.stringify(state.length));
       return state;
   }
 };
