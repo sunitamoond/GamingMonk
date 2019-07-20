@@ -1,9 +1,9 @@
 
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import { View, Text, TouchableOpacity, Image} from 'react-native';
 
 
-export default class MovieItemComponent extends React.Component {
+export default class MovieItemComponent extends React.PureComponent {
 
     constructor(props) {
         super(props);
