@@ -42,7 +42,6 @@ _addOrRemoveFromLikes(item, isAdd) {
             //     color="#223322"
             //   />
     render() {
-      alert("a");
         return (
 
            	<View style={styles.container}>
