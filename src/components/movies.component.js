@@ -18,8 +18,13 @@ class MoviesComponent extends React.Component {
     }
 
 _addOrRemoveFromLikes(item, isAdd) {
- //tood later
+  this.props.Movies.map(function(movie) {
+    if(movie.id == item.id) {
+      movie.isLiked = isAdd;
+      return movie;
     }
+  })
+}
 
   renderMovieItem = (item) => {
     return <MovieItem addOrRemoveFromLikes={this._addOrRemoveFromLikes.bind(this)} item={item}/>
@@ -37,6 +42,7 @@ _addOrRemoveFromLikes(item, isAdd) {
             //     color="#223322"
             //   />
     render() {
+      alert("a");
         return (
 
            	<View style={styles.container}>

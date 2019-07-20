@@ -9,9 +9,17 @@ export default class MovieItemComponent extends React.Component {
         super(props);
         
         var movie = this.props.item;
+        var bool = false;
+        var color = 'grey';
+        if(this.props.item != undefined && this.props.item.isLiked != undefined) {
+            bool = this.props.item.isLiked;
+            if(bool) {
+                color = 'red';
+            }
+        }
         this.state = {
-            myDynamicColor: 'grey',
-            boolValue: false,
+            myDynamicColor: color,
+            boolValue: bool
         }
     }
 
@@ -29,7 +37,7 @@ changeColor(bool){
       boolValue: !bool,
     })
   }
-  this.props.addOrRemoveFromLikes(this.props.item, bool);
+  this.props.addOrRemoveFromLikes(this.props.item, !bool);
 }
    
 
